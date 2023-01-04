@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:noxico/Screens/analyzing.dart';
@@ -6,6 +5,7 @@ import 'package:noxico/Screens/intro.dart';
 
 import 'package:noxico/constant.dart';
 import 'package:noxico/size_config.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class InstructScreen extends StatefulWidget {
   static const routeName = '/instruct';
@@ -17,6 +17,10 @@ class InstructScreen extends StatefulWidget {
 
 class _InstructScreenState extends State<InstructScreen> {
   _camera() async {
+    var status = await Permission.camera.request().isDenied;
+    if (status) {
+      return;
+    }
     final XFile? photo =
         await ImagePicker().pickImage(source: ImageSource.camera);
     if (photo == null) {
@@ -39,26 +43,23 @@ class _InstructScreenState extends State<InstructScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 19.0),
+          padding: EdgeInsets.all(getProportionateScreenHeight(19)),
           child: Column(
             children: [
               Align(
                 alignment: Alignment.centerRight,
-                child: SizedBox(
-                  height: AppBar().preferredSize.height,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, IntroScreen.routeName, (route) => false);
-                    },
-                    child: const Icon(
-                      Icons.close,
-                    ),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, IntroScreen.routeName, (route) => false);
+                  },
+                  child: const Icon(
+                    Icons.close,
                   ),
                 ),
               ),
               SizedBox(
-                height: getProportionateScreenHeight(10),
+                height: getProportionateScreenHeight(43),
               ),
               Image.asset(
                 'assets/imgs/instructions.png',
@@ -85,9 +86,7 @@ class _InstructScreenState extends State<InstructScreen> {
                   width: getProportionateScreenHeight(123),
                 ),
               ),
-              SizedBox(
-                height: getProportionateScreenHeight(43),
-              ),
+              Spacer(),
               Material(
                 color: Colors.transparent,
                 borderRadius: BorderRadius.circular(12),
@@ -100,7 +99,8 @@ class _InstructScreenState extends State<InstructScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                          color: const Color.fromRGBO(220, 220, 220, 1), width: 1),
+                          color: const Color.fromRGBO(220, 220, 220, 1),
+                          width: 1),
                       color: Colors.transparent,
                     ),
                     alignment: Alignment.center,
@@ -111,7 +111,10 @@ class _InstructScreenState extends State<InstructScreen> {
                     ),
                   ),
                 ),
-              )
+              ),
+              SizedBox(
+                height: getProportionateScreenHeight(15),
+              ),
             ],
           ),
         ),

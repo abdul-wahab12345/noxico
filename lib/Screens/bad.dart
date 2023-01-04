@@ -18,7 +18,7 @@ class _BadResultScreenState extends State<BadResultScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(19.0),
+          padding: EdgeInsets.all(getProportionateScreenHeight(19)),
           child: Column(
             children: [
               Align(

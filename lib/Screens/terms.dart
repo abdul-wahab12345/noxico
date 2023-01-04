@@ -20,23 +20,23 @@ class _TermsScreenState extends State<TermsScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 28),
+          padding: EdgeInsets.all( getProportionateScreenHeight(19)),
           child: Column(
             children: [
               Align(
                 alignment: Alignment.centerRight,
-                child: SizedBox(
-                  height: AppBar().preferredSize.height,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, IntroScreen.routeName, (route) => false);
-                    },
-                    child: const Icon(
-                      Icons.close,
-                    ),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, IntroScreen.routeName, (route) => false);
+                  },
+                  child: const Icon(
+                    Icons.close,
                   ),
                 ),
+              ),
+              SizedBox(
+                height: getProportionateScreenHeight(25),
               ),
               Center(
                 child: Text(
@@ -60,9 +60,7 @@ class _TermsScreenState extends State<TermsScreen> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: getProportionateScreenHeight(20),
-              ),
+              Spacer(),
               Material(
                 color: Colors.transparent,
                 borderRadius: BorderRadius.circular(12),

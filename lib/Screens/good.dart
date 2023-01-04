@@ -18,7 +18,7 @@ class _GoodResultScreenState extends State<GoodResultScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(19.0),
+          padding: EdgeInsets.all(getProportionateScreenHeight(19)),
           child: Column(
             children: [
               Align(
@@ -90,7 +90,7 @@ class _GoodResultScreenState extends State<GoodResultScreen> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

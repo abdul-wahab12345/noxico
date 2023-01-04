@@ -26,11 +26,12 @@
 	<true/>
 	
 	<key>NSCameraUsageDescription</key>
-	<string>To scan product you want to check</string>
+	<string>We need to request your permission to capture photos with your to scan for toxins.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To capture audio</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>To pick images from library you want to scan</string>
+    <string>We need to request your permission to read your photos to load them into the app.</string>
+
 
 
 	<key>UILaunchStoryboardName</key>

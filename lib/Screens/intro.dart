@@ -76,7 +76,10 @@ class _IntroScreenState extends State<IntroScreen> {
                     ),
                   ),
                 ),
-              )
+              ),
+               SizedBox(
+                height: getProportionateScreenHeight(5),
+              ),
             ],
           ),
         ),
