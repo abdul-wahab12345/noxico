@@ -20,8 +20,8 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
   void didChangeDependencies() {
     if (isFirst) {
       Future.delayed(const Duration(seconds: 5)).then((value) async {
-       Navigator.pushNamedAndRemoveUntil(
-                          context, GoodResultScreen.routeName, (route) => false);
+        Navigator.pushNamedAndRemoveUntil(
+            context, GoodResultScreen.routeName, (route) => false);
         isFirst = false;
       });
     }
@@ -39,14 +39,15 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
             ),
             Image.asset(
               'assets/imgs/loader.gif',
-              height: getProportionateScreenHeight(79),
-              width: getProportionateScreenHeight(89),
+              height: getProportionateScreenHeight(100),
+              width: getProportionateScreenHeight(100),
+              fit: BoxFit.cover,
             ),
             SizedBox(
               height: getProportionateScreenHeight(60),
             ),
             Text(
-              "Analyzing ingredients..",
+              "ANALYZING INGREDIENTS...",
               style: TextStyle(
                 fontSize: 20,
                 letterSpacing: 2.07,
@@ -65,12 +66,13 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
                 },
                 splashColor: primaryColor.withOpacity(0.5),
                 child: Container(
-                  height: getProportionateScreenHeight(66),
+                  height: getProportionateScreenHeight(60),
                   width: getProportionateScreenWidth(314),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                        color: const Color.fromRGBO(220, 220, 220, 1), width: 1),
+                        color: const Color.fromRGBO(220, 220, 220, 1),
+                        width: 1),
                     color: Colors.transparent,
                   ),
                   alignment: Alignment.center,
@@ -83,7 +85,7 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
               ),
             ),
             SizedBox(
-              height: getProportionateScreenHeight(20),
+              height: getProportionateScreenHeight(60),
             ),
           ],
         ),

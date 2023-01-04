@@ -43,7 +43,9 @@ class _InstructScreenState extends State<InstructScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(getProportionateScreenHeight(19)),
+          padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenHeight(19),
+              vertical: getProportionateScreenHeight(19)),
           child: Column(
             children: [
               Align(
@@ -59,12 +61,13 @@ class _InstructScreenState extends State<InstructScreen> {
                 ),
               ),
               SizedBox(
-                height: getProportionateScreenHeight(43),
+                height: getProportionateScreenHeight(40),
               ),
               Image.asset(
                 'assets/imgs/instructions.png',
                 height: getProportionateScreenHeight(337),
-                width: getProportionateScreenWidth(314),
+                // width: getProportionateScreenWidth(314),
+                fit: BoxFit.cover,
               ),
               SizedBox(
                 height: getProportionateScreenHeight(28),
@@ -74,16 +77,17 @@ class _InstructScreenState extends State<InstructScreen> {
                 style: bodyStyle,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
-                height: getProportionateScreenHeight(28),
-              ),
+              // SizedBox(
+              //   height: getProportionateScreenHeight(28),
+              // ),
+              Spacer(),
               InkWell(
                 onTap: _camera,
                 splashColor: primaryColor.withOpacity(0.5),
                 child: Image.asset(
                   "assets/imgs/camera_btn.png",
-                  height: getProportionateScreenHeight(123),
-                  width: getProportionateScreenHeight(123),
+                  height: getProportionateScreenHeight(130),
+                  width: getProportionateScreenHeight(130),
                 ),
               ),
               Spacer(),
@@ -94,7 +98,7 @@ class _InstructScreenState extends State<InstructScreen> {
                   onTap: _gallery,
                   splashColor: primaryColor.withOpacity(0.5),
                   child: Container(
-                    height: getProportionateScreenHeight(66),
+                    height: getProportionateScreenHeight(60),
                     width: getProportionateScreenWidth(314),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -113,7 +117,7 @@ class _InstructScreenState extends State<InstructScreen> {
                 ),
               ),
               SizedBox(
-                height: getProportionateScreenHeight(15),
+                height: getProportionateScreenHeight(20),
               ),
             ],
           ),

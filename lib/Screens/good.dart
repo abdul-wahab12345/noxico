@@ -24,10 +24,10 @@ class _GoodResultScreenState extends State<GoodResultScreen> {
               Align(
                 alignment: Alignment.centerRight,
                 child: InkWell(
-                  onTap:  () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, IntroScreen.routeName, (route) => false);
-                    },
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, IntroScreen.routeName, (route) => false);
+                  },
                   child: const Icon(
                     Icons.close,
                   ),
@@ -65,15 +65,15 @@ class _GoodResultScreenState extends State<GoodResultScreen> {
                   textAlign: TextAlign.center,
                 ),
               ),
-             const Spacer(),
+              const Spacer(),
               Material(
                 color: const Color.fromRGBO(60, 59, 56, 1),
                 borderRadius: BorderRadius.circular(12),
                 child: InkWell(
-                  onTap:  () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, IntroScreen.routeName, (route) => false);
-                    },
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, IntroScreen.routeName, (route) => false);
+                  },
                   splashColor: primaryColor.withOpacity(0.5),
                   child: Container(
                     height: getProportionateScreenHeight(66),

@@ -35,16 +35,16 @@ class _IntroScreenState extends State<IntroScreen> {
               SizedBox(
                 height: getProportionateScreenHeight(38),
               ),
-              Center(
-                child: SvgPicture.asset("assets/svg/label.svg"),
-              ),
+              Center(child: Image.asset('assets/imgs/group4.png')),
+              // Center(
+              //   child: SvgPicture.asset("assets/svg/label.svg"),
+              // ),
               SizedBox(
                 height: getProportionateScreenHeight(27.3),
               ),
               Container(
                 alignment: Alignment.center,
-                width: getProportionateScreenWidth(294),
-               
+                width: getProportionateScreenWidth(295),
                 child: Text(
                   "Avoid chemicals and toxins in food, cosmetics and cleaning products.",
                   style: bodyStyle,
@@ -61,7 +61,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   },
                   splashColor: primaryColor.withOpacity(0.5),
                   child: Container(
-                    height: getProportionateScreenHeight(66),
+                    height: getProportionateScreenHeight(60),
                     width: getProportionateScreenWidth(270),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -72,13 +72,15 @@ class _IntroScreenState extends State<IntroScreen> {
                     child: Text(
                       "Get Started",
                       style: bodyStyle.copyWith(
-                          color: const Color.fromRGBO(35, 35, 35, 1)),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                          color: const Color.fromRGBO(23, 23, 23, 1)),
                     ),
                   ),
                 ),
               ),
-               SizedBox(
-                height: getProportionateScreenHeight(5),
+              SizedBox(
+                height: height(context) * 5,
               ),
             ],
           ),

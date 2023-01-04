@@ -18,9 +18,12 @@ class _TermsScreenState extends State<TermsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(250, 246, 241, 1),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all( getProportionateScreenHeight(19)),
+          padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenHeight(20),
+              vertical: getProportionateScreenHeight(20)),
           child: Column(
             children: [
               Align(
@@ -36,7 +39,7 @@ class _TermsScreenState extends State<TermsScreen> {
                 ),
               ),
               SizedBox(
-                height: getProportionateScreenHeight(25),
+                height: getProportionateScreenHeight(20),
               ),
               Center(
                 child: Text(
@@ -45,18 +48,27 @@ class _TermsScreenState extends State<TermsScreen> {
                 ),
               ),
               SizedBox(
-                height: getProportionateScreenHeight(28),
+                height: getProportionateScreenHeight(20),
               ),
               Center(
                 child: Container(
                   alignment: Alignment.center,
-                  width: getProportionateScreenWidth(296),
-                  height: getProportionateScreenHeight(519),
-                  child: Text(
-                    "This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions.",
-                    style: bodyStyle.copyWith(fontSize: 17),
-                    // overflow: TextOverflow.fade,
-                    textAlign: TextAlign.center,
+
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  // width: getProportionateScreenWidth(296),
+                  height: getProportionateScreenHeight(500),
+                  child: Stack(
+                    children: [
+                      SingleChildScrollView(
+                        child: Text(
+                          "This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions.This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This ap This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions.",
+                          style: bodyStyle.copyWith(fontSize: 17),
+                          overflow: TextOverflow.fade,
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      FadeEndListView()
+                    ],
                   ),
                 ),
               ),
@@ -70,7 +82,7 @@ class _TermsScreenState extends State<TermsScreen> {
                   },
                   splashColor: primaryColor.withOpacity(0.5),
                   child: Container(
-                    height: getProportionateScreenHeight(66),
+                    height: getProportionateScreenHeight(60),
                     width: getProportionateScreenWidth(270),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -85,7 +97,39 @@ class _TermsScreenState extends State<TermsScreen> {
                     ),
                   ),
                 ),
-              )
+              ),
+              SizedBox(
+                height: height(context) * 5,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class FadeEndListView extends StatelessWidget {
+  const FadeEndListView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: 100,
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.3, 1.0],
+            colors: [
+              Theme.of(context).scaffoldBackgroundColor.withOpacity(0.0),
+              Theme.of(context).scaffoldBackgroundColor,
             ],
           ),
         ),

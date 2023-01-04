@@ -24,10 +24,10 @@ class _BadResultScreenState extends State<BadResultScreen> {
               Align(
                 alignment: Alignment.centerRight,
                 child: InkWell(
-                  onTap:  () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, IntroScreen.routeName, (route) => false);
-                    },
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, IntroScreen.routeName, (route) => false);
+                  },
                   child: const Icon(
                     Icons.close,
                   ),
@@ -36,24 +36,24 @@ class _BadResultScreenState extends State<BadResultScreen> {
               SizedBox(
                 height: getProportionateScreenHeight(49),
               ),
-               Image.asset(
+              Image.asset(
                 'assets/imgs/thumbs_down.png',
                 height: getProportionateScreenHeight(149),
                 width: getProportionateScreenHeight(149),
               ),
               Expanded(
                 // height: getProportionateScreenHeight(532),
-               
+
                 child: ListView(
                   children: [
                     buildCons(
-                  "Trientine hydrochloride",
-                  "The U.S. Environmental Protection Agency has identified this chemical as a possible human carcinogen.",
-                ),
-                buildCons(
-                  "1,3Propane sultone",
-                  "Listed on the 14th Report on Carcinogens as a reasonably anticipated human carcinogen.",
-                ),
+                      "Trientine hydrochloride",
+                      "The U.S. Environmental Protection Agency has identified this chemical as a possible human carcinogen.",
+                    ),
+                    buildCons(
+                      "1,3Propane sultone",
+                      "Listed on the 14th Report on Carcinogens as a reasonably anticipated human carcinogen.",
+                    ),
                   ],
                 ),
               ),
@@ -65,9 +65,9 @@ class _BadResultScreenState extends State<BadResultScreen> {
                 borderRadius: BorderRadius.circular(12),
                 child: InkWell(
                   onTap: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, IntroScreen.routeName, (route) => false);
-                    },
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, IntroScreen.routeName, (route) => false);
+                  },
                   splashColor: primaryColor.withOpacity(0.5),
                   child: Container(
                     height: getProportionateScreenHeight(66),
@@ -75,9 +75,7 @@ class _BadResultScreenState extends State<BadResultScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: const Color.fromRGBO(60, 59, 56, 1),
-                        width: 2
-                      ),
+                          color: const Color.fromRGBO(60, 59, 56, 1), width: 2),
                       color: const Color.fromRGBO(60, 59, 56, 1),
                     ),
                     alignment: Alignment.center,
