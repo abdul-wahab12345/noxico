@@ -65,7 +65,7 @@ class _GoodResultScreenState extends State<GoodResultScreen> {
                   textAlign: TextAlign.center,
                 ),
               ),
-             Spacer(),
+             const Spacer(),
               Material(
                 color: const Color.fromRGBO(60, 59, 56, 1),
                 borderRadius: BorderRadius.circular(12),

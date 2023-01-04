@@ -51,7 +51,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Material(
                 color: primaryColor,
                 borderRadius: BorderRadius.circular(12),
@@ -72,7 +72,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     child: Text(
                       "Get Started",
                       style: bodyStyle.copyWith(
-                          color: Color.fromRGBO(35, 35, 35, 1)),
+                          color: const Color.fromRGBO(35, 35, 35, 1)),
                     ),
                   ),
                 ),

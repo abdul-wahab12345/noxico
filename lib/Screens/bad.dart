@@ -75,7 +75,7 @@ class _BadResultScreenState extends State<BadResultScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: Color.fromRGBO(60, 59, 56, 1),
+                        color: const Color.fromRGBO(60, 59, 56, 1),
                         width: 2
                       ),
                       color: const Color.fromRGBO(60, 59, 56, 1),

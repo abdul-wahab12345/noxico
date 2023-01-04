@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 //-----------------------urls-----------------------
 
@@ -34,7 +32,7 @@ TextStyle bodyStyle = TextStyle(
   fontWeight: FontWeight.w400,
 );
 
-TextStyle headStyle = TextStyle(
+TextStyle headStyle = const TextStyle(
   color: Color.fromRGBO(25, 25, 25, 1),
   fontSize: 16,
   letterSpacing: 1.18,

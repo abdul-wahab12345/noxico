@@ -1,10 +1,7 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:noxico/Screens/analyzing.dart';
-import 'package:noxico/Screens/bad.dart';
-import 'package:noxico/Screens/good.dart';
 import 'package:noxico/Screens/intro.dart';
 
 import 'package:noxico/constant.dart';
@@ -103,14 +100,14 @@ class _InstructScreenState extends State<InstructScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                          color: Color.fromRGBO(220, 220, 220, 1), width: 1),
+                          color: const Color.fromRGBO(220, 220, 220, 1), width: 1),
                       color: Colors.transparent,
                     ),
                     alignment: Alignment.center,
                     child: Text(
                       "Choose from Photo Library",
                       style: bodyStyle.copyWith(
-                          color: Color.fromRGBO(35, 35, 35, 1)),
+                          color: const Color.fromRGBO(35, 35, 35, 1)),
                     ),
                   ),
                 ),

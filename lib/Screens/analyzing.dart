@@ -54,7 +54,7 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
                 color: contentColor,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Material(
               color: Colors.transparent,
               borderRadius: BorderRadius.circular(12),
@@ -70,14 +70,14 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                        color: Color.fromRGBO(220, 220, 220, 1), width: 1),
+                        color: const Color.fromRGBO(220, 220, 220, 1), width: 1),
                     color: Colors.transparent,
                   ),
                   alignment: Alignment.center,
                   child: Text(
                     "Cancel",
                     style: bodyStyle.copyWith(
-                        color: Color.fromRGBO(35, 35, 35, 1)),
+                        color: const Color.fromRGBO(35, 35, 35, 1)),
                   ),
                 ),
               ),

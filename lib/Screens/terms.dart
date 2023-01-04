@@ -20,7 +20,7 @@ class _TermsScreenState extends State<TermsScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 28),
+          padding: const EdgeInsets.symmetric(horizontal: 28),
           child: Column(
             children: [
               Align(
@@ -83,7 +83,7 @@ class _TermsScreenState extends State<TermsScreen> {
                     child: Text(
                       "I agree",
                       style: bodyStyle.copyWith(
-                          color: Color.fromRGBO(35, 35, 35, 1)),
+                          color: const Color.fromRGBO(35, 35, 35, 1)),
                     ),
                   ),
                 ),

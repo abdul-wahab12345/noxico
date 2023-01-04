@@ -6,7 +6,6 @@ import 'package:noxico/Screens/good.dart';
 import 'package:noxico/Screens/instruct.dart';
 import 'package:noxico/Screens/intro.dart';
 import 'package:noxico/Screens/terms.dart';
-import 'package:noxico/size_config.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,14 +23,14 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromRGBO(250, 246, 241, 1),
         textTheme: GoogleFonts.robotoTextTheme(),
       ),
-      home: IntroScreen(),
+      home: const IntroScreen(),
       routes: {
-        IntroScreen.routeName: (ctx) => IntroScreen(),
-        TermsScreen.routeName: (ctx) => TermsScreen(),
-        InstructScreen.routeName: (ctx) => InstructScreen(),
-        GoodResultScreen.routeName: (ctx) => GoodResultScreen(),
-        BadResultScreen.routeName: (ctx) => BadResultScreen(),
-        AnalyzingScreen.routeName: (ctx) => AnalyzingScreen(),
+        IntroScreen.routeName: (ctx) => const IntroScreen(),
+        TermsScreen.routeName: (ctx) => const TermsScreen(),
+        InstructScreen.routeName: (ctx) => const InstructScreen(),
+        GoodResultScreen.routeName: (ctx) => const GoodResultScreen(),
+        BadResultScreen.routeName: (ctx) => const BadResultScreen(),
+        AnalyzingScreen.routeName: (ctx) => const AnalyzingScreen(),
       },
     );
   }
