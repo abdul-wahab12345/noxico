@@ -62,7 +62,8 @@ class _TermsScreenState extends State<TermsScreen> {
                       SingleChildScrollView(
                         child: Text(
                           "This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions.This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This ap This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions. This app lets you upload a photo and get predictions.",
-                          style: bodyStyle.copyWith(fontSize: 17),
+                          style: bodyStyle.copyWith(
+                              fontSize: 17, letterSpacing: 0.2),
                           overflow: TextOverflow.fade,
                           textAlign: TextAlign.center,
                         ),

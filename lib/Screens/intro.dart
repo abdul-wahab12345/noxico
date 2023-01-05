@@ -29,8 +29,8 @@ class _IntroScreenState extends State<IntroScreen> {
               ),
               SvgPicture.asset(
                 "assets/svg/logo.svg",
-                height: getProportionateScreenHeight(145),
-                width: getProportionateScreenHeight(145),
+                height: height(context) * 20,
+                width: height(context) * 20,
               ),
               SizedBox(
                 height: getProportionateScreenHeight(38),

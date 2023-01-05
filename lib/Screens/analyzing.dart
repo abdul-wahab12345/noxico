@@ -39,8 +39,8 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
             ),
             Image.asset(
               'assets/imgs/loader.gif',
-              height: getProportionateScreenHeight(100),
-              width: getProportionateScreenHeight(100),
+              height: height(context) * 20,
+              width: height(context) * 20,
               fit: BoxFit.cover,
             ),
             SizedBox(

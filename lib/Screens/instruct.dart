@@ -66,7 +66,7 @@ class _InstructScreenState extends State<InstructScreen> {
               Image.asset(
                 'assets/imgs/instructions.png',
                 height: getProportionateScreenHeight(337),
-                // width: getProportionateScreenWidth(314),
+                width: double.infinity,
                 fit: BoxFit.cover,
               ),
               SizedBox(

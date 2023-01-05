@@ -38,8 +38,8 @@ class _BadResultScreenState extends State<BadResultScreen> {
               ),
               Image.asset(
                 'assets/imgs/thumbs_down.png',
-                height: getProportionateScreenHeight(149),
-                width: getProportionateScreenHeight(149),
+                height: height(context) * 20,
+                width: height(context) * 20,
               ),
               Expanded(
                 // height: getProportionateScreenHeight(532),

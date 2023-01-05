@@ -38,8 +38,8 @@ class _GoodResultScreenState extends State<GoodResultScreen> {
               ),
               Image.asset(
                 'assets/imgs/thumbs_up.png',
-                height: getProportionateScreenHeight(149),
-                width: getProportionateScreenHeight(149),
+                height: height(context) * 20,
+                width: height(context) * 20,
               ),
               SizedBox(
                 height: getProportionateScreenHeight(52),
@@ -76,7 +76,7 @@ class _GoodResultScreenState extends State<GoodResultScreen> {
                   },
                   splashColor: primaryColor.withOpacity(0.5),
                   child: Container(
-                    height: getProportionateScreenHeight(66),
+                    height: getProportionateScreenHeight(60),
                     width: getProportionateScreenWidth(314),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
